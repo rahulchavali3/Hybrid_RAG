@@ -1,0 +1,13 @@
+fastapi
+inngest
+llama-index-core
+llama-index-readers-file
+llama-index-llms-google-genai
+llama-index-embeddings-google-genai
+google-genai
+python-dotenv
+qdrant-client
+uvicorn
+fastembed
+streamlit
+ollama

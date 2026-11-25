@@ -1,0 +1,29 @@
+INNgest DEVELOPMENT SERVER : http://localhost:8288/ - npx inngest-cli@latest dev -u http://localhost:8000/api/inngest
+
+TO run APP Server : uv run uvicorn main:app 
+
+For qdrantDB to use :  
+1. use the existing quadrant presnt in the docker) docker start qdrantRagDb
+2. create new ones) docker run -d --name qdrantRagDb -p 6333:6333 -p 6334:6334 -v "$(pwd)/qdrant_storage:/qdrant/storage" qdrant/qdrant
+
+To run Streamlit : uv run streamlit run .\streamlit_app.py
+
+===============================================================================================
+
+ingest :
+
+{
+  "data": {
+    "pdf_path": "D:\\myProjects\\RAG_APP\\uploads\\CHAVALI_RAHUL.pdf",
+    "source_id": "CHAVALI_RAHUL.pdf"
+  }
+}
+
+query :
+
+{
+  "data": {
+    "question": "What are the main skills mentioned in the resume?",
+    "top_k": 5
+  }
+}
